@@ -15,3 +15,15 @@
 2024-11-14 16:42:49,214 - KEVIN - INFO - Archivo procesado exitosamente: Real Decreto 3042014, de 5 de mayo, de prevención de blanqueo de capitales.pdf
 2024-11-14 16:42:53,960 - KEVIN - INFO - Modelo inicializado correctamente
 2024-11-14 16:42:53,961 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-14 16:51:51,538 - KEVIN - ERROR - Error en la aplicación: There are multiple elements with the same `key='prompt_Analista'`. To fix this, please make sure that the `key` argument is unique for each element you create.
+2024-11-14 16:53:38,622 - KEVIN - ERROR - Error en la aplicación: ButtonMixin.button() got an unexpected keyword argument 'label_visibility'
+2024-11-14 16:54:45,623 - KEVIN - ERROR - Error en la aplicación: There are multiple elements with the same `key='prompt_Analista'`. To fix this, please make sure that the `key` argument is unique for each element you create.
+2024-11-14 16:55:47,777 - KEVIN - ERROR - Error en la aplicación: There are multiple elements with the same `key='prompt_Analista'`. To fix this, please make sure that the `key` argument is unique for each element you create.
+2024-11-14 17:00:45,696 - KEVIN - INFO - Archivo procesado exitosamente: PG 0014-2016 Manual de PBC Copernicus Servicing v2024.pdf
+2024-11-14 17:00:46,448 - KEVIN - INFO - Archivo procesado exitosamente: Real Decreto 3042014, de 5 de mayo, de prevención de blanqueo de capitales.pdf
+2024-11-14 17:00:51,400 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-14 17:00:51,401 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-14 17:05:14,096 - KEVIN - INFO - Archivo procesado exitosamente: PG 0014-2016 Manual de PBC Copernicus Servicing v2024.pdf
+2024-11-14 17:05:14,909 - KEVIN - INFO - Archivo procesado exitosamente: Real Decreto 3042014, de 5 de mayo, de prevención de blanqueo de capitales.pdf
+2024-11-14 17:05:19,551 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-14 17:05:19,553 - KEVIN - INFO - Modelo inicializado correctamente

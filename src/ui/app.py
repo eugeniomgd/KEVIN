@@ -39,26 +39,6 @@ class OperationsApp:
         # Inicializar el prompt seleccionado si no existe
         if "selected_prompt" not in st.session_state:
             st.session_state.selected_prompt = "analista"
-        
-        # Renderizar el selector de prompts
-        self.render_prompt_selector()
-
-    def render_prompt_selector(self):
-        """Renderiza el selector de prompts"""
-        st.write("### Selecciona el estilo de respuesta")
-        
-        # Crear columnas para las tarjetas
-        cols = st.columns(len(PROMPTS))
-        
-        for col, (prompt_id, prompt_info) in zip(cols, PROMPTS.items()):
-            with col:
-                if st.button(
-                    label=prompt_info['name'],
-                    help=prompt_info['description'],
-                    key=f"prompt_{prompt_id}",
-                    use_container_width=True
-                ):
-                    st.session_state.selected_prompt = prompt_id
 
     def run(self):
         """Ejecuta la aplicación"""
