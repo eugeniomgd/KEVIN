@@ -52,19 +52,13 @@ class OperationsApp:
         
         for col, (prompt_id, prompt_info) in zip(cols, PROMPTS.items()):
             with col:
-                # Crear una tarjeta seleccionable
-                card = st.container()
-                with card:
-                    if st.button(
-                        f"### {prompt_info['name']}\n\n{prompt_info['description']}",
-                        key=f"prompt_{prompt_id}",
-                        use_container_width=True
-                    ):
-                        st.session_state.selected_prompt = prompt_id
-                        
-        # Mostrar el prompt seleccionado actualmente
-        if "selected_prompt" in st.session_state:
-            st.caption(f"Prompt actual: {PROMPTS[st.session_state.selected_prompt]['name']}")
+                if st.button(
+                    label=prompt_info['name'],
+                    help=prompt_info['description'],
+                    key=f"prompt_{prompt_id}",
+                    use_container_width=True
+                ):
+                    st.session_state.selected_prompt = prompt_id
 
     def run(self):
         """Ejecuta la aplicación"""
