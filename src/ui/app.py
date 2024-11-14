@@ -28,8 +28,8 @@ class OperationsApp:
     def setup_page_config(self):
         """Configura las opciones de la página"""
         st.set_page_config(
-            page_title="Kevin - Asistente de Operaciones",
-            page_icon="🤖",
+            page_title="Kevin - Asistente de analisis documental",
+            page_icon=str(Path("assets/logo.ico")),
             layout="wide",
             initial_sidebar_state="expanded",
             menu_items=None  # Oculta el menú de hamburguesa

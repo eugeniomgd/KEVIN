@@ -4,7 +4,7 @@ from datetime import datetime
 from .config import settings
 
 class Logger:
-    def __init__(self, name: str = "OPERATIONS"):
+    def __init__(self, name: str = "KEVIN"):
         self.logger = logging.getLogger(name)
         if not self.logger.handlers:
             self._setup_logger()

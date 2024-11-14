@@ -11,6 +11,7 @@ from src.core.config import settings
 from src.core.logger import Logger
 from src.utils.document_processor import DocumentProcessor
 from src.utils.token_counter import TokenCounter
+from src.prompts.qa_prompts import QA_PROMPT
 
 class RAGModel:
     def __init__(self):
@@ -116,7 +117,8 @@ class RAGModel:
                 llm=self.llm,
                 chain_type="stuff",
                 retriever=self.vectorstore.as_retriever(search_kwargs={"k": 3}),
-                return_source_documents=True
+                return_source_documents=True,
+                chain_type_kwargs={"prompt": QA_PROMPT}
             )
             
             self.logger.info("Modelo inicializado correctamente")
