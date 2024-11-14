@@ -11,7 +11,8 @@ from src.core.config import settings
 from src.core.logger import Logger
 from src.utils.document_processor import DocumentProcessor
 from src.utils.token_counter import TokenCounter
-from src.prompts.qa_prompts import QA_PROMPT
+from src.prompts.qa_prompts import QA_PROMPT, get_prompt
+import streamlit as st
 
 class RAGModel:
     def __init__(self):
@@ -152,6 +153,10 @@ class RAGModel:
             Información de internet:
             {web_results}
             """
+            
+            # Usar el prompt seleccionado
+            selected_prompt = get_prompt(st.session_state.selected_prompt)
+            self.qa_chain.combine_documents_chain.llm_chain.prompt = selected_prompt
             
             # Generar respuesta
             response = self.qa_chain({"query": question})

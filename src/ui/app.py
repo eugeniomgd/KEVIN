@@ -6,6 +6,7 @@ from src.models.rag_model import RAGModel
 from src.ui.components.header import Header
 from src.ui.components.sidebar import Sidebar
 from src.ui.components.chat import Chat
+from src.prompts.qa_prompts import PROMPTS
 
 class OperationsApp:
     def __init__(self):
@@ -28,23 +29,42 @@ class OperationsApp:
     def setup_page_config(self):
         """Configura las opciones de la página"""
         st.set_page_config(
-            page_title="Kevin - Asistente de analisis documental",
+            page_title="Kevin - Asistente de Operaciones",
             page_icon=str(Path("assets/logo.ico")),
             layout="wide",
             initial_sidebar_state="expanded",
-            menu_items=None  # Oculta el menú de hamburguesa
+            menu_items=None
         )
         
-        # Ocultar elementos de Streamlit
-        hide_streamlit_style = """
-            <style>
-                #MainMenu {visibility: hidden;}
-                footer {visibility: hidden;}
-                .stDeployButton {display:none;}
-                header {visibility: hidden;}
-            </style>
-        """
-        st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+        # Inicializar el prompt seleccionado si no existe
+        if "selected_prompt" not in st.session_state:
+            st.session_state.selected_prompt = "analista"
+        
+        # Renderizar el selector de prompts
+        self.render_prompt_selector()
+
+    def render_prompt_selector(self):
+        """Renderiza el selector de prompts"""
+        st.write("### Selecciona el estilo de respuesta")
+        
+        # Crear columnas para las tarjetas
+        cols = st.columns(len(PROMPTS))
+        
+        for col, (prompt_id, prompt_info) in zip(cols, PROMPTS.items()):
+            with col:
+                # Crear una tarjeta seleccionable
+                card = st.container()
+                with card:
+                    if st.button(
+                        f"### {prompt_info['name']}\n\n{prompt_info['description']}",
+                        key=f"prompt_{prompt_id}",
+                        use_container_width=True
+                    ):
+                        st.session_state.selected_prompt = prompt_id
+                        
+        # Mostrar el prompt seleccionado actualmente
+        if "selected_prompt" in st.session_state:
+            st.caption(f"Prompt actual: {PROMPTS[st.session_state.selected_prompt]['name']}")
 
     def run(self):
         """Ejecuta la aplicación"""
