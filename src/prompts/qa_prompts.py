@@ -3,7 +3,7 @@ from langchain.prompts import PromptTemplate
 PROMPTS = {
     "Analista": {
         "name": "Analista",
-        "description": "Especializado en análisis detallado de documentos con referencias precisas",
+        "description": "Analisis detallado de documentos con referencias precisas",
         "template": """Eres un analista documental experto.
         Tu objetivo es proporcionar análisis detallados y bien referenciados.
         

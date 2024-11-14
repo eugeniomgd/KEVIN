@@ -69,6 +69,9 @@ OPERATIONS/
 │ │ ├── init.py
 │ │ └── rag_model.py # Implementación del modelo RAG
 │ │
+│ ├── prompts/ # Versiones del role del sistema
+│ │ └── qa_prompts.py # multiples personalidades para el modelo
+│ │
 │ ├── utils/ # Utilidades generales
 │ │ ├── init.py
 │ │ ├── document_processor.py # Procesamiento de documentos

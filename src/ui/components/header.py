@@ -4,7 +4,7 @@ from src.prompts.qa_prompts import PROMPTS
 class Header:
     def render(self):
         """Renderiza el header con el selector de prompts"""
-        st.write("### Selecciona el estilo de respuesta")
+        st.write("### ¿Con quién quieres hablar?")
         
         cols = st.columns(len(PROMPTS))
         
