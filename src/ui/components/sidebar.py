@@ -14,11 +14,10 @@ class Sidebar:
         """Renderiza la barra lateral con sus funcionalidades"""
         with st.sidebar:
             # Logo y título
-            st.markdown("<h1 style='text-align: left; color: #31333F;'>Kevin</h1>", unsafe_allow_html=True)
+            st.markdown("<H1 style='text-align: left; font-style: bold; color: #31333F;'>KEVIN</H1>", unsafe_allow_html=True)
             st.markdown("<p style='text-align: left; font-style: italic; color: #31333F; margin-top: -15px;'>Tu asistente de análisis de documentos</p>", unsafe_allow_html=True)
-            st.image("assets/logo.png", width=150)
+            st.image("assets/logo.png", width=120)
             
-            st.markdown("---")
             # Sección de documentos
             st.markdown("<h2 style='text-align: left; color: #31333F;'>📁 Documentos cargados</h2>", unsafe_allow_html=True)
             
@@ -33,6 +32,17 @@ class Sidebar:
                 key="doc_uploader"
             )
 
+            st.divider()
+
+            # Inicializar el modelo
+
+            # Estado del modelo
+            is_initialized = (hasattr(rag_model, 'vectorstore') and 
+                            hasattr(rag_model, 'qa_chain') and
+                            st.session_state.initialized)
+            
+            st.write("Estado:", "✅ Inicializado" if is_initialized else "❌ No inicializado")
+
             # Botón para inicializar/reinicializar
             col1, col2 = st.columns([4,1])
             with col1:
@@ -42,18 +52,26 @@ class Sidebar:
                     key="init_button",
                     use_container_width=True
                 )
-            
             if initialize_button:
                 self._initialize_model(uploaded_files, rag_model)
+            
+            # Mostrar estado y métricas
+            st.subheader("📊 Métricas del Modelo")
 
-            st.markdown("---")
-
-            # Estado del modelo
-            st.markdown("<h2 style='text-align: left; color: #31333F;'>ℹ️ Estado del Modelo</h2>", unsafe_allow_html=True)
-            if st.session_state.get('initialized', False):
-                st.success("Modelo activo")
-            else:
-                st.warning("Modelo no inicializado")
+            # Métricas de tokens usando TokenCounter
+            if is_initialized:
+                metrics = rag_model.token_counter.get_metrics()
+                
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.metric("Total Tokens", f"{metrics['total_tokens']:,}")
+                with col2:
+                    st.metric("Costo Est.", f"${metrics['total_cost']:.2f}")
+                
+                # Botón para reiniciar contadores
+                if st.button("Reiniciar Contadores"):
+                    rag_model.token_counter.reset()
+                    st.rerun()
 
     def _show_current_documents(self):
         """Muestra y permite gestionar los documentos actuales"""

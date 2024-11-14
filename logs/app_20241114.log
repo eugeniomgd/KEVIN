@@ -2,3 +2,16 @@
 2024-11-14 13:59:33,038 - OPERATIONS - INFO - Archivo procesado exitosamente: Real Decreto 3042014, de 5 de mayo, de prevención de blanqueo de capitales.pdf
 2024-11-14 13:59:41,544 - OPERATIONS - INFO - Modelo inicializado correctamente
 2024-11-14 13:59:41,546 - OPERATIONS - INFO - Modelo inicializado correctamente
+2024-11-14 16:18:45,663 - KEVIN - INFO - Archivo procesado exitosamente: PG 0014-2016 Manual de PBC Copernicus Servicing v2024.pdf
+2024-11-14 16:18:46,402 - KEVIN - INFO - Archivo procesado exitosamente: Real Decreto 3042014, de 5 de mayo, de prevención de blanqueo de capitales.pdf
+2024-11-14 16:18:51,301 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-14 16:18:51,302 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-14 16:22:19,394 - KEVIN - INFO - Archivo procesado exitosamente: PG 0014-2016 Manual de PBC Copernicus Servicing v2024.pdf
+2024-11-14 16:22:20,136 - KEVIN - INFO - Archivo procesado exitosamente: Real Decreto 3042014, de 5 de mayo, de prevención de blanqueo de capitales.pdf
+2024-11-14 16:22:24,871 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-14 16:22:24,873 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-14 16:27:38,950 - KEVIN - ERROR - Error en la aplicación: cannot access local variable 'is_initialized' where it is not associated with a value
+2024-11-14 16:42:48,511 - KEVIN - INFO - Archivo procesado exitosamente: PG 0014-2016 Manual de PBC Copernicus Servicing v2024.pdf
+2024-11-14 16:42:49,214 - KEVIN - INFO - Archivo procesado exitosamente: Real Decreto 3042014, de 5 de mayo, de prevención de blanqueo de capitales.pdf
+2024-11-14 16:42:53,960 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-14 16:42:53,961 - KEVIN - INFO - Modelo inicializado correctamente
