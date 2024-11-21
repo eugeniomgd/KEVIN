@@ -34,7 +34,18 @@ cd OPERATIONS
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+```
+
+En Linux:
+
+```bash
+source venv/bin/activate
+```
+
+En Windows:
+
+```bash
+venv\Scripts\activate.ps1
 ```
 
 3. Instalar dependencias:
