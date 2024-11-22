@@ -11,7 +11,7 @@ from src.core.config import settings
 from src.core.logger import Logger
 from src.utils.document_processor import DocumentProcessor
 from src.utils.token_counter import TokenCounter
-from src.prompts.qa_prompts import QA_PROMPT, get_prompt
+from src.prompts.qa_prompts import QA_PROMPT, get_prompt, PROMPTS
 import streamlit as st
 
 class RAGModel:
@@ -154,6 +154,10 @@ class RAGModel:
             {web_results}
             """
             
+            # Verificar si hay un prompt seleccionado, si no, usar el primero
+            if 'selected_prompt' not in st.session_state or not st.session_state.selected_prompt:
+                st.session_state.selected_prompt = list(PROMPTS.keys())[0]  # Asignar el primer prompt
+
             # Usar el prompt seleccionado
             selected_prompt = get_prompt(st.session_state.selected_prompt)
             self.qa_chain.combine_documents_chain.llm_chain.prompt = selected_prompt

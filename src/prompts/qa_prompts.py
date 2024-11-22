@@ -1,7 +1,7 @@
 from langchain.prompts import PromptTemplate
 
 PROMPTS = {
-    "Analista": {
+    "analista": {
         "name": "Analista",
         "description": "Analisis detallado de documentos con referencias precisas",
         "template": """Eres un analista documental experto.
@@ -19,7 +19,7 @@ PROMPTS = {
         Pregunta: {question}
         Respuesta:"""
     },
-    "Abogado": {
+    "abogado": {
         "name": "Abogado",
         "description": "Análisis con enfoque jurídico",
         "template": """Eres un abogado que analiza documentos con enfoque jurídico.
@@ -36,7 +36,7 @@ PROMPTS = {
         Pregunta: {question}
         Respuesta:"""
     },
-    "Ingeniero": {
+    "ingeniero": {
         "name": "Ingeniero",
         "description": "Especializado en procedimientos operativos",
         "template": """Eres un ingeniero que analiza documentos con enfoque operativo.
@@ -60,7 +60,7 @@ PROMPTS = {
 
 # Definir QA_PROMPT como el prompt por defecto (usando el de analista)
 QA_PROMPT = PromptTemplate(
-    template=PROMPTS["Analista"]["template"],
+    template=PROMPTS["analista"]["template"],
     input_variables=["context", "question"]
 )
 
