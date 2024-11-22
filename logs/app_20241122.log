@@ -3,3 +3,8 @@
 2024-11-22 09:17:51,317 - KEVIN - INFO - Archivo procesado exitosamente: PR 0037-2016 Manual de Closing v3.2.pdf
 2024-11-22 09:17:52,260 - KEVIN - INFO - Modelo inicializado correctamente
 2024-11-22 09:17:52,261 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-22 14:31:04,630 - KEVIN - INFO - Archivo procesado exitosamente: 2024.07.18 Jurisdicciones de riesgo.pdf
+2024-11-22 14:31:04,983 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-22 14:31:04,984 - KEVIN - INFO - Modelo inicializado correctamente
+2024-11-22 14:31:10,784 - KEVIN - ERROR - Error en consulta: 'analista'
+2024-11-22 14:31:10,785 - KEVIN - ERROR - Error generando respuesta: 'analista'
