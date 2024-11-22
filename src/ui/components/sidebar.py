@@ -14,9 +14,8 @@ class Sidebar:
         """Renderiza la barra lateral con sus funcionalidades"""
         with st.sidebar:
             # Logo y título
-            st.markdown("<H1 style='text-align: left; font-style: bold; color: #31333F;'>KEVIN</H1>", unsafe_allow_html=True)
+            st.image("assets/logo.png", width=250)
             st.markdown("<p style='text-align: left; font-style: italic; color: #31333F; margin-top: -15px;'>Tu asistente de análisis de documentos</p>", unsafe_allow_html=True)
-            st.image("assets/logo.png", width=120)
             
             # Sección de documentos
             st.markdown("<h2 style='text-align: left; color: #31333F;'>📁 Documentos cargados</h2>", unsafe_allow_html=True)

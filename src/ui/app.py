@@ -29,7 +29,7 @@ class OperationsApp:
     def setup_page_config(self):
         """Configura las opciones de la página"""
         st.set_page_config(
-            page_title="Kevin - Asistente multiusos",
+            page_title="Kevin",
             page_icon=str(Path("assets/logo.ico")),
             layout="wide",
             initial_sidebar_state="expanded",
