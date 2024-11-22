@@ -7,7 +7,7 @@ from src.core.config import settings
 
 class Sidebar:
     def __init__(self):
-        """Inicializa el componente de la barra lateral"""
+        """Inicializa el componente del sidebar"""
         self.logger = Logger()
 
     def render(self, rag_model):
